@@ -1,0 +1,19 @@
+{
+  "name": "hybrid-automation-framework",
+  "version": "1.0.0",
+  "description": "Hybrid Playwright + Selenium + API Automation Framework",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.1.2"
+  }
+}

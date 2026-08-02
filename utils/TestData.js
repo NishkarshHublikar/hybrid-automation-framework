@@ -1,14 +1,14 @@
+import Helpers from "./Helpers.js";
+
 class TestData {
 
     static generateUser() {
-
-        const timestamp = Date.now();
 
         return {
 
             name: "Nishkarsh",
 
-            email: `nishkarsh${timestamp}@gmail.com`,
+            email: Helpers.generateEmail(),
 
             password: "Password@123",
 

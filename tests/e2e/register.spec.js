@@ -6,7 +6,7 @@ import SignupPage from '../../pages/SignupPage';
 
 import TestData from '../../utils/TestData';
 
-test('User can navigate to registration form', async ({ page }) => {
+test("User can register successfully", async ({ page }) => {
 
     const homePage = new HomePage(page);
     const loginPage = new LoginPage(page);
@@ -20,11 +20,23 @@ test('User can navigate to registration form', async ({ page }) => {
 
     await loginPage.verifyLoginPageLoaded();
 
-    await signupPage.signup(
+    await loginPage.signup(
         user.name,
         user.email
     );
 
-    await expect(signupPage.accountInformationHeading).toBeVisible();
+    await expect(signupPage.accountHeading).toBeVisible({
+        timeout: 30000
+    });
+
+    await signupPage.fillAccountInformation(user);
+
+    await signupPage.fillAddressInformation(user);
+
+    await signupPage.createAccount();
+
+    await expect(
+        signupPage.accountCreatedHeading
+    ).toBeVisible();
 
 });

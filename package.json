@@ -10,9 +10,8 @@
     "e2e": "playwright test tests/e2e",
     "headed": "playwright test --headed",
     "debug": "playwright test --debug",
-    "ui": "playwright test --ui",
     "report": "playwright show-report",
-    "codegen": "playwright codegen https://automationexercise.com"
+    "ui": "playwright test --ui"
   },
   "keywords": [],
   "author": "",
@@ -20,5 +19,8 @@
   "devDependencies": {
     "@playwright/test": "^1.62.1",
     "@types/node": "^26.1.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
   }
 }

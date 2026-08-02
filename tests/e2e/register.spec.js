@@ -1,10 +1,10 @@
 import { test, expect } from '@playwright/test';
 
-import HomePage from '../pages/HomePage';
-import LoginPage from '../pages/LoginPage';
-import SignupPage from '../pages/SignupPage';
+import HomePage from '../../pages/HomePage';
+import LoginPage from '../../pages/LoginPage';
+import SignupPage from '../../pages/SignupPage';
 
-import TestData from '../utils/TestData';
+import TestData from '../../utils/TestData';
 
 test('User can navigate to registration form', async ({ page }) => {
 
